@@ -215,7 +215,7 @@ span{
     position: relative;
     
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-gap: 10px;
     background-color: #222;
     /*padding: 20px 500px;*/
@@ -238,7 +238,7 @@ span{
 }
 
 .containerx .box:hover{
-    background-color: #2ecc70af;
+    background-color: #2ecc7086;
 }
 
 .containerx .box img{
@@ -270,28 +270,48 @@ span{
    padding-bottom: 100px;
    color: #fff;
    
+   
 }
 
-.container-sobre-mi{
+
+.container-sobre-mi {
     background: #333;
-    
-    
-
-    place-items: center;
     transition: 0.5s;
-    
+    padding: 20px;
+    color: #fff;
 }
 
-.container-sobre-mi .paragraph img{
-    
-    max-width: 200px;
-    margin: 0 10px;
-    margin-bottom: 30px;
-    float: right;
-    border: 2px solid transparent;
-    border-radius: 30px ;
-    
+.container-sobre-mi .paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
 }
+
+.container-sobre-mi .paragraph img {
+    max-width: 200px;
+    margin: 20px 0;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+
+/* Media query para dispositivos móviles */
+@media (min-width: 600px) {
+    .container-sobre-mi .paragraph {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .container-sobre-mi .paragraph img {
+        order: 2;
+        margin: 0 0 0 20px;
+        float: none;
+    }
+}
+
+
+
 
 /* contactame */
 
